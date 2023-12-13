@@ -48,6 +48,7 @@ const functionGrigliaSuperiore = () => {
           </div>`;
         } else if (obj.type == "album") {
           grigliaSuperiore.innerHTML += `<div class="col-12 col-sm-6 col-lg-4 p-1">
+
             <div class="rounded-2 bg-secondary overflow-hidden">
               <div class="row align-items-center">
                 <div class="col-3">

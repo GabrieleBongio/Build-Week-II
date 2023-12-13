@@ -156,13 +156,12 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-8">
-            <!--
 
-            -->
-            <div class="bg-dark rounded-3 border border-2 border-info mt-2 p-2">
-              <div class="d-flex justify-content-between">
-                <div>
+          <div class="col-12 col-sm-8">
+            <!-- ---------------------- -->
+            <div class="bg-dark rounded-3 border border-2 border-info mt-2 px-3 py-2">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="me-2 d-none d-md-block">
                   <button class="btn btn-dark py-1 px-2 rounded-pill bg-black">
                     <svg
                       data-encore-id="icon"
@@ -194,7 +193,75 @@
                     </svg>
                   </button>
                 </div>
-                <div>
+                <!-------------- campo search nav ------------ -->
+                <div
+                  class="d-none d-md-flex flex-row-reverse align-items-center bg-black opacity-50 rounded-pill me-auto px-3 py-2 d-none"
+                >
+                  <form role="search">
+                    <input
+                      class="border-0 text-white me-5"
+                      placeholder="Cosa vuoi ascoltare?"
+                      data-testid="search-input"
+                      data-encore-id="type"
+                      value=""
+                      style="background-color: black"
+                    />
+                  </form>
+                  <div class="d-flex align-items-center">
+                    <span class="ms-1 me-2"
+                      ><svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        class="Svg-sc-ytk21e-0 kPpCsU mOLTJ2mxkzHJj6Y9_na_"
+                        fill="#ffffff"
+                        viewBox="0 0 16 16"
+                        style="width: 16px"
+                      >
+                        <path
+                          d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="w-100 d-md-none text-light mt-3">
+                  <h1>Cerca</h1>
+
+                  <div
+                    class="d-flex d-md-none align-items-center bg-light rounded-2 px-3 py-2 overflow-hidden"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span class="me-2"
+                        ><svg
+                          data-encore-id="icon"
+                          role="img"
+                          aria-hidden="true"
+                          class="Svg-sc-ytk21e-0 kPpCsU mOLTJ2mxkzHJj6Y9_na_"
+                          viewBox="0 0 16 16"
+                          style="width: 16px"
+                        >
+                          <path
+                            d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
+                    <form role="search">
+                      <input
+                        class="border-0"
+                        placeholder="Cosa vuoi ascoltare?"
+                        data-testid="search-input"
+                        data-encore-id="type"
+                        value=""
+                        style="background-color: #f8f9fa"
+                      />
+                    </form>
+                  </div>
+                </div>
+
+                <div class="d-none d-md-block">
                   <button class="btn btn-dark py-1 px-2 rounded-circle bg-black opacity-75">
                     <svg
                       data-encore-id="icon"
@@ -226,6 +293,616 @@
                       ></path>
                     </svg>
                   </button>
+                </div>
+              </div>
+              <!-- ---------------------- inizio pagina search --------------------------------- -->
+              <div class="text-start mt-3 mb-5">
+                <div class="text-white mb-3">
+                  <h2>Sfoglia tutto</h2>
+                </div>
+                <div
+                  class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xxl-6 g-2"
+                >
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #016450"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-1.jpeg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Podcast</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #8401e7"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-2.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Eventi dal vivo</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #1e3264"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-3.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Creato per te</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #e8115b"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-4.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Nuove Uscite</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #27856a"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-5.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Estate</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #148a08"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-6.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Pop</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #8c1932"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-7.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Buone feste</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #503750"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-8.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Hip Hop</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #0b73ec"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-9.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Classifiche podcast</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #8d66ac"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-10.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Nuove uscite nei podcast</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #608106"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-11.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Video podcast</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #777777"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-12.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Solo su Spotity</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #8d67ab"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-13.jpeg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Classifiche</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #d84001"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-14.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Dance/Elettronica</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #e0118c"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-15.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Latina</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #e91328"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-16.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Rock</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #e91328"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-17.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Indie</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #8d67ab"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-18.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Scopri</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #e0118c"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-19.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Mood</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #af2896"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-20.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Sanremo</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #2e45b9"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-21.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">In auto</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #b02897"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-22.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Di tendenza</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #076953"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-23.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">EQUAL</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #a56752"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-24.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">RADAR</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #777777"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-25.jpeg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Allenamento</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #527aa1"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-26.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Party</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #e8115b"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-27.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Gaming</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #ba5d07"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-28.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">R&B</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #ba5d07"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-29.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Anni</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a href="#"
+                      ><div
+                        class="card text-light overflow-hidden border-0"
+                        style="background-color: #d84001"
+                      >
+                        <img
+                          src="./assets/imgs/search/image-30.jpg"
+                          class="card-img shadow-lg"
+                          alt="img"
+                          style="
+                            transform: rotate(25deg) translateX(42%) translateY(10%) scale(0.5);
+                          "
+                        />
+                        <div class="card-img-overlay">
+                          <h5 class="card-title">Relax</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
               <footer>
@@ -364,13 +1041,13 @@
               </footer>
             </div>
             <!--
-
-            -->
+  
+              -->
           </div>
         </div>
       </div>
     </main>
-    <aside class="position-absolute bottom-0 w-100 pb-2 d-none d-sm-block bg-black">
+    <aside class="position-sticky bottom-0 w-100 py-2 d-none d-sm-block bg-black">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-4">
@@ -585,7 +1262,14 @@
                   ></path>
                 </svg>
               </label>
-              <input type="range" min="0" max="100" step="10" style="width: 10vw" />
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="10"
+                style="accent-color: green; width: 10vw; height: 5px"
+              />
+
               <button
                 class="btn btn-dark bg-black rounded-pill py-1 px-2 border border-0 d-none d-md-inline"
               >
@@ -611,7 +1295,7 @@
         </div>
       </div>
     </aside>
-    <aside class="position-absolute bottom-0 w-100 p-2 d-sm-none bg-black">
+    <aside class="position-sticky bottom-0 w-100 p-2 d-sm-none bg-black">
       <div class="container-fluid bg-dark rounded-3 px-2 py-1">
         <div class="row align-items-center">
           <div class="col-3">
@@ -726,6 +1410,7 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="./script/search.js"></script>
     <!--
 
         Lente
