@@ -152,7 +152,7 @@
             <!-- ---------------------- -->
             <div class="bg-dark rounded-3 border border-2 border-info mt-2 px-3 py-2">
               <div class="d-flex justify-content-between align-items-center">
-                <div class="me-2">
+                <div class="me-2 d-none d-md-block">
                   <button class="btn btn-dark py-1 px-2 rounded-pill bg-black">
                     <svg
                       data-encore-id="icon"
@@ -186,7 +186,7 @@
                 </div>
                 <!-------------- campo search nav ------------ -->
                 <div
-                  class="d-flex flex-row-reverse align-items-center bg-black opacity-50 rounded-pill me-auto px-3 py-2"
+                  class="d-none d-md-flex flex-row-reverse align-items-center bg-black opacity-50 rounded-pill me-auto px-3 py-2 d-none"
                 >
                   <form role="search">
                     <input
@@ -217,7 +217,40 @@
                   </div>
                 </div>
 
-                <div>
+                <div class="w-100 d-md-none text-light mt-3">
+                  <h1>Cerca</h1>
+
+                  <div class="d-flex d-md-none align-items-center bg-light rounded-2 px-3 py-2 overflow-hidden">
+                    <div class="d-flex align-items-center">
+                      <span class="me-2"
+                        ><svg
+                          data-encore-id="icon"
+                          role="img"
+                          aria-hidden="true"
+                          class="Svg-sc-ytk21e-0 kPpCsU mOLTJ2mxkzHJj6Y9_na_"
+                          viewBox="0 0 16 16"
+                          style="width: 16px"
+                        >
+                          <path
+                            d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
+                    <form role="search">
+                      <input
+                        class="border-0"
+                        placeholder="Cosa vuoi ascoltare?"
+                        data-testid="search-input"
+                        data-encore-id="type"
+                        value=""
+                        style="background-color: #f8f9fa"
+                      />
+                    </form>
+                  </div>
+                </div>
+
+                <div class="d-none d-md-block">
                   <button class="btn btn-dark py-1 px-2 rounded-circle bg-black opacity-75">
                     <svg
                       data-encore-id="icon"
