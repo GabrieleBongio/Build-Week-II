@@ -5,7 +5,7 @@ const URL = "https://deezerdevs-deezer.p.rapidapi.com/album/";
 const params = new URLSearchParams(window.location.search); // oggetto costruito a partire dai parametri nella URL es. ?resourceId=2938123
 // per renderlo dinamico
 // const id = params.get("id");
-const id = 10709540;
+const id = 246245;
 
 fetch(URL + id, {
   method: "GET",
@@ -72,10 +72,25 @@ fetch(URL + id, {
     console.log(songs);
 
     songs.forEach((song, index) => {
-      songsContainerHTML += `<div class="container-fluid" id="songsContainer">
-      <div class="row text-light px-3 mt-2 align-items-center justify-content-around">
+      songsContainerHTML += `<div class="container-fluid singleSong rounded-3" >
+      <div class="row text-light px-3 py-1 mt-2 align-items-center justify-content-around ">
         <div class="col-1 d-none d-md-flex">
-          <p class="m-0 opacity-75">${index + 1}</p>
+          <p class="m-0 opacity-75 indexNum">${index + 1}</p>
+          <span class="m-0 d-none trackPlayBtn" >
+                        <svg
+                          data-encore-id="icon"
+                          role="img"
+                          aria-hidden="true"
+                          fill="#ffffff"
+                          viewBox="0 0 16 16"
+                          class="Svg-sc-ytk21e-0 kPpCsU"
+                          style="width: 16px; margin-top: -4px"
+                        >
+                          <path
+                            d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
+                          ></path>
+                        </svg>
+                      </span>
         </div>
         <div class="col-8 col-md-8">
           <div>
@@ -129,37 +144,49 @@ fetch(URL + id, {
     });
     songsContainer.innerHTML = songsContainerHTML;
 
+    const singleSong = document.querySelectorAll(".singleSong");
+
+    singleSong.forEach((song) => {
+      const trackPlayBtn = song.querySelector(".trackPlayBtn");
+      const indexNum = song.querySelector(".indexNum");
+
+      song.addEventListener("mouseover", () => {
+        song.classList.add("bg-secondary", "bg-opacity-25");
+        trackPlayBtn.classList.remove("d-none");
+        indexNum.classList.add("d-none");
+      });
+      song.addEventListener("mouseout", () => {
+        song.classList.remove("bg-secondary");
+        trackPlayBtn.classList.add("d-none");
+        indexNum.classList.remove("d-none");
+      });
+    });
+
     // release date
     const releaseDate = document.querySelector("#releaseDate");
     let releaseDateHTML = "";
 
-    
     const monthsMapping = {
-        '01': "January",
-        '02': "February",
-        '03': "March",
-        '04': "April",
-        '05': "May",
-        '06': "June",
-        '07': "July",
-        '08': "August",
-        '09': "September",
-        '10': "October",
-        '11': "November",
-        '12': "December"
-      };
+      "01": "January",
+      "02": "February",
+      "03": "March",
+      "04": "April",
+      "05": "May",
+      "06": "June",
+      "07": "July",
+      "08": "August",
+      "09": "September",
+      10: "October",
+      11: "November",
+      12: "December",
+    };
 
-      const month = monthsMapping[(albumInfo.release_date).slice(5,7)]
-      const year = (albumInfo.release_date).slice(0,4)
-      const day = (albumInfo.release_date).slice(8,10)
-
-      
-
-
-
+    const month = monthsMapping[albumInfo.release_date.slice(5, 7)];
+    const year = albumInfo.release_date.slice(0, 4);
+    const day = albumInfo.release_date.slice(8, 10);
 
     releaseDateHTML += `<div class="m-4" id="releaseDate">
-    <p class="text-light opacity-75">${day+" "+month+ " "+year}</p>
+    <p class="text-light opacity-75">${day + " " + month + " " + year}</p>
   </div>`;
     releaseDate.innerHTML = releaseDateHTML;
   });
