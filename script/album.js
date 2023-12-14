@@ -1,4 +1,6 @@
 import { Key } from "../token.js";
+import { casualLibrary } from "./libreria.js";
+
 const Host = "deezerdevs-deezer.p.rapidapi.com";
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/album/";
 
@@ -104,12 +106,11 @@ fetch(URL + id, {
 
     //getting color
     getColorFromImage(coverImg.src, 50, 50, function (color) {
-      
       const cssColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
-      const cssColor2 = `rgba(${color.r} , ${color.g-20}, ${color.b}, ${color.a})`;
-      console.log("cssColor:", cssColor)
-      const gradient = `linear-gradient(176deg, ${cssColor} 0% ,${cssColor2} 50%, #191919 100% )`
-      console.log("cssColor2:", cssColor2)
+      const cssColor2 = `rgba(${color.r} , ${color.g - 20}, ${color.b}, ${color.a})`;
+      console.log("cssColor:", cssColor);
+      const gradient = `linear-gradient(176deg, ${cssColor} 0% ,${cssColor2} 50%, #191919 100% )`;
+      console.log("cssColor2:", cssColor2);
 
       albumHeader.style.background = gradient;
     });

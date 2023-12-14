@@ -1,4 +1,6 @@
-import { Key, casualLibrary } from "../token.js";
+import { Key } from "../token.js";
+import { casualLibrary } from "./libreria.js";
+
 const Host = "deezerdevs-deezer.p.rapidapi.com";
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/";
 
