@@ -2,10 +2,41 @@ import { Key } from "../token.js";
 const Host = "deezerdevs-deezer.p.rapidapi.com";
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/album/";
 
+// code for extracting color from picture
+function getColorFromImage(imageUrl, x = 50, y = 50, callback) {
+  var img = new Image();
+
+  img.crossOrigin = "Anonymous";
+
+  img.src = imageUrl;
+
+  img.onload = function () {
+    var canvas = document.createElement("canvas");
+
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    var ctx = canvas.getContext("2d");
+
+    ctx.drawImage(img, 0, 0);
+
+    var imageData = ctx.getImageData(x, y, 1, 1).data;
+
+    var color = {
+      r: imageData[0],
+      g: imageData[1],
+      b: imageData[2],
+      a: imageData[3] / 255,
+    };
+
+    callback(color);
+  };
+}
+
 const params = new URLSearchParams(window.location.search); // oggetto costruito a partire dai parametri nella URL es. ?resourceId=2938123
 // per renderlo dinamico
 // const id = params.get("id");
-const id = 246245;
+const id = 97140952;
 
 fetch(URL + id, {
   method: "GET",
@@ -20,11 +51,11 @@ fetch(URL + id, {
     const albumHeader = document.querySelector("#albumHeader");
     let albumHeaderHTML = "";
 
-    albumHeaderHTML += `<div class="container-fluid" id="albumHeader">
+    albumHeaderHTML += `<div class="container-fluid">
     <div class="row align-items-end justify-content-center">
       <div class="col-10 mb-4 col-md-4 mb-md-0 text-center">
         <div>
-          <img src="${albumInfo.cover_medium}" alt="albumImg" class="img-fluid" />
+          <img src="${albumInfo.cover_medium}" alt="albumImg" class="img-fluid rounded-2 coverImg" />
         </div>
       </div>
       <div class="col-12 col-md-8">
@@ -63,7 +94,25 @@ fetch(URL + id, {
       </div>
     </div>
   </div>`;
+
     albumHeader.innerHTML = albumHeaderHTML;
+
+    // selecting coverimg src
+    const coverImg = document.querySelector(".coverImg");
+    console.dir(coverImg.src);
+    coverImg.crossOrigin = "Anonymous";
+
+    //getting color
+    getColorFromImage(coverImg.src, 50, 50, function (color) {
+      
+      const cssColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
+      const cssColor2 = `rgba(${color.r} , ${color.g-20}, ${color.b}, ${color.a})`;
+      console.log("cssColor:", cssColor)
+      const gradient = `linear-gradient(176deg, ${cssColor} 0% ,${cssColor2} 50%, #191919 100% )`
+      console.log("cssColor2:", cssColor2)
+
+      albumHeader.style.background = gradient;
+    });
 
     // songs printing
     const songsContainer = document.querySelector("#songsContainer");
