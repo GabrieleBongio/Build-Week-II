@@ -35,6 +35,7 @@ function getColorFromImage(imageUrl, x = 50, y = 50, callback) {
 
 const params = new URLSearchParams(window.location.search); // oggetto costruito a partire dai parametri nella URL es. ?resourceId=2938123
 // per renderlo dinamico
+console.log(params)
 // const id = params.get("id");
 const id = 97140952;
 
@@ -80,7 +81,7 @@ fetch(URL + id, {
                     class="img-fluid rounded-circle"
                   />
                 </div>
-                <p class="text-light m-0"><b>${albumInfo.artist.name}</b></p>
+                <p class="text-light m-0"><b><a href="./artist.html" class="text-decoration-none text-light">${albumInfo.artist.name}</a></b></p>
                 <p class="text-light m-0 d-none d-md-none d-lg-flex">· ${albumInfo.release_date.slice(0, 4)} · ${
       albumInfo.tracks.data.length
     } canzoni, ${Math.floor(albumInfo.duration / 60)} min ${String(albumInfo.duration % 60).padStart(2, "0")} sec.</p>
@@ -152,7 +153,7 @@ fetch(URL + id, {
         <div class="col-8 col-md-8">
           <div>
             <p class="m-0">${song.title}</p>
-            <p class="m-0 opacity-75">${song.artist.name}</p>
+            <p class="m-0 opacity-75"><a href="./artist.html" class="text-decoration-none text-light">${albumInfo.artist.name}</a></p>
           </div>
         </div>
         <div class="col-md-3 d-none d-md-block">
