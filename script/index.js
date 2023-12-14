@@ -22,7 +22,9 @@ const functionGrigliaSuperiore = () => {
       })
       .then((obj) => {
         if (obj.type == "artist") {
-          grigliaSuperiore.innerHTML += `<div class="col-12 col-sm-6 col-lg-4 p-1">
+          grigliaSuperiore.innerHTML += ` 
+          <div class="col-12 col-sm-6 col-lg-4 p-1">
+          <a class="text-decoration-none" href="artist.html?artistId=${obj.id}">
             <div class="rounded-2 bg-secondary overflow-hidden">
               <div class="row align-items-center">
                 <div class="col-3">
@@ -32,10 +34,11 @@ const functionGrigliaSuperiore = () => {
                   <p class="fw-bold text-white m-0">${obj.name}</p>
                 </div>
               </div>
-            </div>
+            </div></a>
           </div>`;
         } else if (obj.type == "playlist") {
           grigliaSuperiore.innerHTML += `<div class="col-12 col-sm-6 col-lg-4 p-1">
+          <a class="text-decoration-none" href="#">
             <div class="rounded-2 bg-secondary overflow-hidden">
               <div class="row align-items-center">
                 <div class="col-3">
@@ -45,11 +48,11 @@ const functionGrigliaSuperiore = () => {
                   <p class="fw-bold text-white m-0">${obj.title}</p>
                 </div>
               </div>
-            </div>
+            </div></a>
           </div>`;
         } else if (obj.type == "album") {
           grigliaSuperiore.innerHTML += `<div class="col-12 col-sm-6 col-lg-4 p-1">
-
+          <a class="text-decoration-none" href="album.html?Id=${obj.id}">
             <div class="rounded-2 bg-secondary overflow-hidden">
               <div class="row align-items-center">
                 <div class="col-3">
@@ -59,7 +62,7 @@ const functionGrigliaSuperiore = () => {
                   <p class="fw-bold text-white m-0">${obj.title}</p>
                 </div>
               </div>
-            </div>
+            </div></a>
           </div>`;
         }
       })
@@ -85,19 +88,25 @@ const functionAscoltateDiRecente = () => {
       })
       .then((obj) => {
         if (obj.type == "artist") {
-          ascoltateDiRecente[i].innerHTML += `<img src="${obj.picture}" class="img-fluid rounded-pill mb-3" />
+          ascoltateDiRecente[i].innerHTML += `<a class="text-decoration-none" href="artist.html?artistId=${obj.id}">
+          <img src="${obj.picture}" class="img-fluid rounded-pill mb-3" />
             <p class="fw-bold text-white m-0">${obj.name}</p>
             <p class="text-white m-0">Artista</p>
+            </a>
             `;
         } else if (obj.type == "playlist") {
-          ascoltateDiRecente[i].innerHTML += `<img src="${obj.picture}" class="img-fluid rounded-2 mb-3" />
+          ascoltateDiRecente[i].innerHTML += `<a class="text-decoration-none" href="#">
+          <img src="${obj.picture}" class="img-fluid rounded-2 mb-3" />
             <p class="fw-bold text-white m-0">${obj.title}</p>
             <p class="text-white m-0">${obj.nb_tracks} brani</p>
+            </a>
             `;
         } else if (obj.type == "album") {
-          ascoltateDiRecente[i].innerHTML += `<img src="${obj.cover}" class="img-fluid rounded-2 mb-3" />
+          ascoltateDiRecente[i].innerHTML += `<a class="text-decoration-none" href="album.html?albumId=${obj.id}">
+          <img src="${obj.cover}" class="img-fluid rounded-2 mb-3" />
             <p class="fw-bold text-white m-0">${obj.title}</p>
             <p class="text-white m-0">${obj.artist.name}</p>
+            </a>
             `;
         }
       });
@@ -125,9 +134,11 @@ const functionAlbum = () => {
         }
       })
       .then((obj) => {
-        albumTop[i].innerHTML += `<img src="${obj.cover}" class="img-fluid rounded-2 mb-3" />
+        albumTop[i].innerHTML += `<a class="text-decoration-none" href="album.html?albumId=${obj.id}">
+        <img src="${obj.cover}" class="img-fluid rounded-2 mb-3" />
             <p class="fw-bold text-white m-0">${obj.title}</p>
             <p class="text-white m-0">${obj.artist.name}</p>
+            </a>
             `;
       });
   }
@@ -154,8 +165,10 @@ const functionArtist = () => {
         }
       })
       .then((obj) => {
-        artistTop[i].innerHTML += `<img src="${obj.picture}" class="img-fluid rounded-pill mb-3" />
+        artistTop[i].innerHTML += `<a class="text-decoration-none" href="artist.html?artistId=${obj.id}">
+        <img src="${obj.picture}" class="img-fluid rounded-pill mb-3" />
             <p class="fw-bold text-white m-0">${obj.name}</p>
+            </a>
             `;
       });
   }
@@ -182,10 +195,11 @@ const functionPlaylist = () => {
         }
       })
       .then((obj) => {
-        playlistTop[i].innerHTML += `<img src="${obj.picture}" class="img-fluid rounded-pill mb-3" />
+        playlistTop[i].innerHTML += `<a class="text-decoration-none" href="#">
+        <img src="${obj.picture}" class="img-fluid rounded-pill mb-3" />
             <p class="fw-bold text-white m-0">${obj.title}</p>
             <p class="text-white m-0">${obj.nb_tracks} brani</p>
-          
+            </a>
             `;
       });
   }
@@ -227,9 +241,11 @@ const functionEstate2023 = () => {
         }
       })
       .then((obj) => {
-        Estate2023Top[i].innerHTML += `<img src="${obj.picture}" class="img-fluid rounded-2 mb-3" />
+        Estate2023Top[i].innerHTML += `<a class="text-decoration-none" href="#">
+        <img src="${obj.picture}" class="img-fluid rounded-2 mb-3" />
             <p class="fw-bold text-white m-0">${obj.title}</p>
             <p class="text-white m-0">${obj.nb_tracks} brani</p>
+            </a>
             `;
       });
   }
@@ -308,10 +324,11 @@ const functionLaMiaLibreria = () => {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;">Artista</p>
-          </div>
+          </div></a>
         </div>`;
         } else if (array.type === "album") {
           document.querySelector("#laMiaLibreria").innerHTML += `<div class="row align-items-center g-2 mb-3">
+          <a class="text-decoration-none" href="album.html?albumId=${obj.id}">
             <div class="col-3">
               <img src=${array.cover} class="img-fluid" />
             </div>
@@ -324,10 +341,11 @@ const functionLaMiaLibreria = () => {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;">Album - ${array.artist.name}</p>
-            </div>
+            </div></a>
           </div>`;
         } else if (array.type === "playlist") {
           document.querySelector("#laMiaLibreria").innerHTML += `<div class="row align-items-center g-2 mb-3">
+          <a class="text-decoration-none" href="#">
             <div class="col-3">
               <img src=${array.picture} class="img-fluid" />
             </div>
@@ -356,9 +374,9 @@ const functionLaMiaLibreria = () => {
 //setTimeout(functionLaMiaLibreria, 3500);
 
 //functionGrigliaSuperiore();
-//functionAscoltateDiRecente();
-//functionAlbum();
-//functionArtist();
+functionAscoltateDiRecente();
+functionAlbum();
+functionArtist();
 //functionPlaylist();
 //functionEstate2023();
 //functionSong();
