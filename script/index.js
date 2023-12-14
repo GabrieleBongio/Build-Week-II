@@ -374,9 +374,9 @@ const functionLaMiaLibreria = () => {
 //setTimeout(functionLaMiaLibreria, 3500);
 
 //functionGrigliaSuperiore();
-functionAscoltateDiRecente();
-functionAlbum();
-functionArtist();
+//functionAscoltateDiRecente();
+//functionAlbum();
+//functionArtist();
 //functionPlaylist();
 //functionEstate2023();
 //functionSong();
