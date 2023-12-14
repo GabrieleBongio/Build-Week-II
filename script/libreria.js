@@ -181,4 +181,25 @@ const casualLibrary = laTuaLibreria.sort((a, b) => {
   return primA - primB;
 });
 
-export { casualLibrary };
+const arrayEstate2023 = [
+  {
+    id: "579513551",
+  },
+  {
+    id: "11999244241",
+  },
+  {
+    id: "10788809502",
+  },
+  {
+    id: "6045750124",
+  },
+  {
+    id: "4519883822",
+  },
+  {
+    id: "65489479",
+  },
+];
+
+export { casualLibrary, arrayEstate2023 };
