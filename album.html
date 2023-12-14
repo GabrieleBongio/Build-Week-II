@@ -13,8 +13,22 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-  </head>
+    <style>
+      .progressBar {
+        height: 5px;
+        background-color: #777;
+        position: relative;
+        margin-top: 8px;
+      }
 
+      .progressBarFill {
+        height: 100%;
+        background-color: #28a745; /* Change this color as needed */
+        width: 0;
+        transition: width 0.2s ease; /* Add a smooth transition effect */
+      }
+    </style>
+  </head>
 
   <body class="bg-black">
     <main>
@@ -150,12 +164,9 @@
           </div>
           <div class="col-12 col-sm-8">
             <div class="bg-dark rounded-3 border border-2 border-info mt-2">
-              <div class="d-flex justify-content-between p-3 position-sticky top-0 bg-black z-3 bg-opacity-75" id="topBar">
+              <div class="d-flex justify-content-between p-3 position-sticky top-0 z-3" id="topBar">
                 <div>
-                  <a
-                    href="javascript:history.go(-1)"
-                    class="btn btn-dark py-1 px-2 rounded-pill bg-black"
-                  >
+                  <a href="javascript:history.go(-1)" class="btn btn-dark py-1 px-2 rounded-pill bg-black">
                     <svg
                       data-encore-id="icon"
                       role="img"
@@ -170,10 +181,7 @@
                       ></path>
                     </svg>
                   </a>
-                  <a
-                    href="javascript:history.go(1)"
-                    class="btn btn-dark py-1 px-2 rounded-circle bg-black"
-                  >
+                  <a href="javascript:history.go(1)" class="btn btn-dark py-1 px-2 rounded-circle bg-black">
                     <svg
                       data-encore-id="icon"
                       role="img"
@@ -397,9 +405,7 @@
                 </div>
                 <hr class="bg-light rounded-circle m-1" style="padding-block: 0.3px" />
                 <!-- inizio canzoni -->
-                <div class="container-fluid" id="songsContainer">
-                  
-                </div>
+                <div class="container-fluid" id="songsContainer"></div>
               </div>
               <!-- sezione release date -->
               <div class="m-4" id="releaseDate">
@@ -636,7 +642,7 @@
             </div>
             <div class="d-flex align-items-center">
               <p class="m-0 text-white opacity-75">0:00</p>
-              <div class="flex-grow-1 bg-dark m-3 border border-2 border-dark rounded-pill"></div>
+              <div class="flex-grow-1 bg-dark m-3 border border-2 border-dark rounded-pill progressBarFill"></div>
               <p class="m-0 text-white opacity-75">3:20</p>
             </div>
           </div>
