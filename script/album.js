@@ -112,6 +112,14 @@ fetch(URL + id, {
       console.log("cssColor2:", cssColor2)
 
       albumHeader.style.background = gradient;
+
+    //   window.addEventListener("scroll", function () {
+    //     console.log(this.scrollY)
+    //     const topBar = document.querySelector("#topBar")
+    //     if (this.scrollY > 10) {
+    //         topBar.style.background = cssColor;
+    //     }
+    //   });
     });
 
     // songs printing
