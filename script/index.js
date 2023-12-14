@@ -80,23 +80,17 @@ for (let i = 0; i < arrayAscoltateDiRecente.length; i++) {
     })
     .then((obj) => {
       if (obj.type == "artist") {
-        ascoltateDiRecente[
-          i
-        ].innerHTML += `<img src="${obj.picture}" class="img-fluid rounded-pill mb-3" />
+        ascoltateDiRecente[i].innerHTML += `<img src="${obj.picture}" class="img-fluid rounded-pill mb-3" />
             <p class="fw-bold text-white m-0">${obj.name}</p>
             <p class="text-white m-0">Artista</p>
             `;
       } else if (obj.type == "playlist") {
-        ascoltateDiRecente[
-          i
-        ].innerHTML += `<img src="${obj.picture}" class="img-fluid rounded-2 mb-3" />
+        ascoltateDiRecente[i].innerHTML += `<img src="${obj.picture}" class="img-fluid rounded-2 mb-3" />
             <p class="fw-bold text-white m-0">${obj.title}</p>
             <p class="text-white m-0">${obj.nb_tracks} brani</p>
             `;
       } else if (obj.type == "album") {
-        ascoltateDiRecente[
-          i
-        ].innerHTML += `<img src="${obj.cover}" class="img-fluid rounded-2 mb-3" />
+        ascoltateDiRecente[i].innerHTML += `<img src="${obj.cover}" class="img-fluid rounded-2 mb-3" />
             <p class="fw-bold text-white m-0">${obj.title}</p>
             <p class="text-white m-0">${obj.artist.name}</p>
             `;
@@ -242,9 +236,7 @@ casualLibrary.forEach((elem) => {
     })
     .then((array) => {
       if (array.type === "artist") {
-        document.querySelector(
-          "#laMiaLibreria"
-        ).innerHTML += `<div class="row align-items-center g-2 mb-3">
+        document.querySelector("#laMiaLibreria").innerHTML += `<div class="row align-items-center g-2 mb-3">
           <div class="col-3">
             <img src=${array.picture} class="img-fluid rounded-pill" />
           </div>
@@ -260,9 +252,7 @@ casualLibrary.forEach((elem) => {
           </div>
         </div>`;
       } else if (array.type === "album") {
-        document.querySelector(
-          "#laMiaLibreria"
-        ).innerHTML += `<div class="row align-items-center g-2 mb-3">
+        document.querySelector("#laMiaLibreria").innerHTML += `<div class="row align-items-center g-2 mb-3">
             <div class="col-3">
               <img src=${array.cover} class="img-fluid" />
             </div>
@@ -278,9 +268,7 @@ casualLibrary.forEach((elem) => {
             </div>
           </div>`;
       } else if (array.type === "playlist") {
-        document.querySelector(
-          "#laMiaLibreria"
-        ).innerHTML += `<div class="row align-items-center g-2 mb-3">
+        document.querySelector("#laMiaLibreria").innerHTML += `<div class="row align-items-center g-2 mb-3">
             <div class="col-3">
               <img src=${array.picture} class="img-fluid" />
             </div>
