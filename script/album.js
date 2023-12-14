@@ -38,8 +38,8 @@ function getColorFromImage(imageUrl, x = 50, y = 50, callback) {
 const params = new URLSearchParams(window.location.search); // oggetto costruito a partire dai parametri nella URL es. ?resourceId=2938123
 // per renderlo dinamico
 console.log(params)
-// const id = params.get("id");
-const id = 97140952;
+const id = params.get("albumId");
+// const id = 97140952;
 
 fetch(URL + id, {
   method: "GET",
