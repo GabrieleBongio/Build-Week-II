@@ -11,14 +11,14 @@ const functionGrigliaSuperiore = (library) => {
     if (element.type == "artist") {
       grigliaSuperiore.innerHTML += ` 
           <div class="col-12 col-sm-6 col-lg-4 p-1">
-            <a class="text-decoration-none" href="artist.html?artistId=${element.id}">
-              <div class="rounded-2 bg-secondary overflow-hidden">
+            <a class="text-decoration-none " href="artist.html?artistId=${element.id}">
+              <div class="rounded-2 bg-secondary overflow-hidden gSup">
                 <div class="row align-items-center">
                   <div class="col-3">
                     <img src="${element.picture}" class="img-fluid rounded-circle" />
                   </div>
                   <div class="col-9">
-                    <p class="fw-bold text-white m-0 limite-righe-1">${element.name}</p>
+                    <p class="fw-bold text-white m-0 limite-righe-1 underline-hover">${element.name}</p>
                   </div>
                 </div>
               </div>
@@ -28,13 +28,13 @@ const functionGrigliaSuperiore = (library) => {
       grigliaSuperiore.innerHTML += `
           <div class="col-12 col-sm-6 col-lg-4 p-1">
             <a class="text-decoration-none" href="#">
-              <div class="rounded-2 bg-secondary overflow-hidden">
+              <div class="rounded-2 bg-secondary overflow-hidden gSup">
                 <div class="row align-items-center">
                   <div class="col-3">
                     <img src="${element.picture}" class="img-fluid" />
                   </div>
                   <div class="col-9">
-                    <p class="fw-bold text-white m-0 limite-righe-1">${element.title}</p>
+                    <p class="fw-bold text-white m-0 limite-righe-1 underline-hover">${element.title}</p>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@ const functionGrigliaSuperiore = (library) => {
                     <img src="${element.cover}" class="img-fluid" />
                   </div>
                   <div class="col-9">
-                    <p class="fw-bold text-white m-0 limite-righe-1">${element.title}</p>
+                    <p class="fw-bold text-white m-0 limite-righe-1 underline-hover">${element.title}</p>
                   </div>
                 </div>
               </div>
@@ -69,23 +69,23 @@ const functionAscoltateDiRecente = (library) => {
     if (arrayAscoltateDiRecente[i].type == "artist") {
       ascoltateDiRecente[i].innerHTML += `
           <a class="text-decoration-none" href="artist.html?artistId=${arrayAscoltateDiRecente[i].id}">
-            <img src="${arrayAscoltateDiRecente[i].picture}" class="img-fluid rounded-pill mb-3" />
-            <p class="fw-bold text-white m-0 limite-righe-1">${arrayAscoltateDiRecente[i].name}</p>
+            <img src="${arrayAscoltateDiRecente[i].picture}" class="img-fluid rounded-pill mb-3 text-center" />
+            <p class="fw-bold text-white m-0 limite-righe-1 underline-hover">${arrayAscoltateDiRecente[i].name}</p>
             <p class="text-white m-0 limite-righe-1">Artista</p>
           </a>`;
     } else if (arrayAscoltateDiRecente[i].type == "playlist") {
       ascoltateDiRecente[i].innerHTML += `
           <a class="text-decoration-none" href="#">
             <img src="${arrayAscoltateDiRecente[i].picture}" class="img-fluid rounded-2 mb-3" />
-            <p class="fw-bold text-white m-0 limite-righe-1">${arrayAscoltateDiRecente[i].title}</p>
-            <p class="text-white m-0 limite-righe-1">${arrayAscoltateDiRecente[i].nb_tracks} brani</p>
+            <p class="fw-bold text-white m-0 limite-righe-1 underline-hover">${arrayAscoltateDiRecente[i].title}</p>
+            <p class="text-white m-0 limite-righe-1 ">${arrayAscoltateDiRecente[i].nb_tracks} brani</p>
           </a>`;
     } else if (arrayAscoltateDiRecente[i].type == "album") {
       ascoltateDiRecente[i].innerHTML += `
           <a class="text-decoration-none" href="album.html?albumId=${arrayAscoltateDiRecente[i].id}">
             <img src="${arrayAscoltateDiRecente[i].cover}" class="img-fluid rounded-2 mb-3" />
-            <p class="fw-bold text-white m-0 limite-righe-1">${arrayAscoltateDiRecente[i].title}</p>
-            <p class="text-white m-0 limite-righe-1">${arrayAscoltateDiRecente[i].artist.name}</p>
+            <p class="fw-bold text-white m-0 limite-righe-1 underline-hover">${arrayAscoltateDiRecente[i].title}</p>
+            <p class="text-white m-0 limite-righe-1 underline-hover">${arrayAscoltateDiRecente[i].artist.name}</p>
           </a>`;
     }
   }
@@ -103,8 +103,8 @@ const functionAlbum = (library) => {
     albumTop[i].innerHTML = `
         <a class="text-decoration-none" href="album.html?albumId=${arrayAlbum[i].id}">
           <img src="${arrayAlbum[i].cover}" class="img-fluid rounded-2 mb-3" />
-          <p class="fw-bold text-white m-0 limite-righe-1">${arrayAlbum[i].title}</p>
-          <p class="text-white m-0 limite-righe-1">${arrayAlbum[i].artist.name}</p>
+          <p class="fw-bold text-white m-0 limite-righe-1 underline-hover">${arrayAlbum[i].title}</p>
+          <p class="text-white m-0 limite-righe-1 underline-hover">${arrayAlbum[i].artist.name}</p>
         </a>`;
   }
 };
@@ -121,7 +121,7 @@ const functionArtist = (library) => {
     artistTop[i].innerHTML = `
         <a class="text-decoration-none" href="artist.html?artistId=${arrayArtist[i].id}">
           <img src="${arrayArtist[i].picture}" class="img-fluid rounded-pill mb-3" />
-          <p class="fw-bold text-white m-0 limite-righe-1">${arrayArtist[i].name}</p>
+          <p class="fw-bold text-white m-0 limite-righe-1 underline-hover">${arrayArtist[i].name}</p>
         </a>`;
   }
 };
@@ -138,7 +138,7 @@ const functionPlaylist = (library) => {
     playlistTop[i].innerHTML = `
         <a class="text-decoration-none" href="#">
           <img src="${arrayPlaylist[i].picture}" class="img-fluid rounded-pill mb-3" />
-          <p class="fw-bold text-white m-0 limite-righe-1">${arrayPlaylist[i].title}</p>
+          <p class="fw-bold text-white m-0 limite-righe-1 underline-hover">${arrayPlaylist[i].title}</p>
           <p class="text-white m-0 limite-righe-1">${arrayPlaylist[i].nb_tracks} brani</p>
         </a>`;
   }
@@ -148,7 +148,7 @@ const functionLaMiaLibreria = (library) => {
   library.forEach((elem) => {
     if (elem.type === "artist") {
       document.querySelector("#laMiaLibreria").innerHTML += `
-          <div class="row align-items-center g-2 mb-3">
+          <div class="row align-items-center g-2 mb-3 gSup2">
             <div class="col-3">
               <a class="text-decoration-none" href="artist.html?artistId=${elem.id}">
                 <img src=${elem.picture} class="img-fluid rounded-pill" />
@@ -156,14 +156,14 @@ const functionLaMiaLibreria = (library) => {
             </div>
             <div class="col-9">
               <a class="text-decoration-none" href="artist.html?artistId=${elem.id}">
-                <p class="text-white m-0 limite-righe-1">${elem.name}</p>
+                <p class="text-white m-0 limite-righe-1 underline-hover ">${elem.name}</p>
                 <p class="fw-normal text-white m-0 limite-righe-1">Artista</p>
               </a>
             </div>
           </div>`;
     } else if (elem.type === "album") {
       document.querySelector("#laMiaLibreria").innerHTML += `
-          <div class="row align-items-center g-2 mb-3">
+          <div class="row align-items-center g-2 mb-3 gSup2">
             <div class="col-3">
               <a class="text-decoration-none" href="album.html?albumId=${elem.id}">      
                 <img src=${elem.cover} class="img-fluid" />
@@ -171,14 +171,14 @@ const functionLaMiaLibreria = (library) => {
             </div>
             <div class="col-9">
               <a class="text-decoration-none" href="album.html?albumId=${elem.id}">      
-                <p class="text-white m-0 limite-righe-1">${elem.title}</p>
-                <p class="fw-normal text-white m-0 limite-righe-1">Album - ${elem.artist.name}</p>
+                <p class="text-white m-0 limite-righe-1 underline-hover">${elem.title}</p>
+                <p class="fw-normal text-white m-0 limite-righe-1 underline-hover">Album - ${elem.artist.name}</p>
               </a>
             </div>
           </div>`;
     } else if (elem.type === "playlist") {
       document.querySelector("#laMiaLibreria").innerHTML += `
-          <div class="row align-items-center g-2 mb-3">
+          <div class="row align-items-center g-2 mb-3 gSup2">
             <div class="col-3">
               <a class="text-decoration-none" href="#">
                 <img src=${elem.picture} class="img-fluid" />
@@ -186,7 +186,7 @@ const functionLaMiaLibreria = (library) => {
             </div>
             <div class="col-9">
               <a class="text-decoration-none" href="#">
-                <p class="text-white m-0 limite-righe-1">${elem.title}</p>
+                <p class="text-white m-0 limite-righe-1 underline-hover">${elem.title}</p>
                 <p class="fw-normal text-white m-0 limite-righe-1">Playlist - ${elem.nb_tracks} brani</p>
               </a>
             </div>
@@ -338,7 +338,7 @@ const functionEstate2023 = (arrayEstate2023) => {
     Estate2023Top[i].innerHTML = `
         <a class="text-decoration-none" href="#">
           <img src="${arrayEstate2023[i].picture}" class="img-fluid rounded-2 mb-3" />
-          <p class="fw-bold text-white m-0 limite-righe-1">${arrayEstate2023[i].title}</p>
+          <p class="fw-bold text-white m-0 limite-righe-1 underline-hover">${arrayEstate2023[i].title}</p>
           <p class="text-white m-0 limite-righe-1">${arrayEstate2023[i].nb_tracks} brani</p>
         </a>`;
   }

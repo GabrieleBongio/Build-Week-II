@@ -38,8 +38,8 @@ function getColorFromImage(imageUrl, x = 50, y = 50, callback) {
 const params = new URLSearchParams(window.location.search); // oggetto costruito a partire dai parametri nella URL es. ?resourceId=2938123
 // per renderlo dinamico
 console.log(params);
-// const id = params.get("albumId");
-const id = 381445657;
+const id = params.get("albumId");
+// const id = 381445657;
 
 fetch(URL + id, {
   method: "GET",
@@ -83,7 +83,7 @@ fetch(URL + id, {
                     class="img-fluid rounded-circle"
                   />
                 </div>
-                <p class="text-light m-0"><b><a href="./artist.html" class="text-decoration-none text-light">${
+                <p class="text-light m-0 underline-hover"><b><a href="./artist.html" class="text-decoration-none text-light  ">${
                   albumInfo.artist.name
                 }</a></b></p>
                 <p class="text-light m-0 d-none d-md-none d-lg-flex">· ${albumInfo.release_date.slice(0, 4)} · ${
@@ -160,8 +160,8 @@ fetch(URL + id, {
         </div>
         <div class="col-8 col-md-8">
           <div>
-            <p class="m-0">${song.title}</p>
-            <p class="m-0 opacity-75"><a href="./artist.html" class="text-decoration-none text-light">${
+            <p class="m-0 underline-hover">${song.title}</p>
+            <p class="m-0 opacity-75 underline-hover"><a href="./artist.html" class="text-decoration-none text-light">${
               albumInfo.artist.name
             }</a></p>
             <audio src="${song.preview}"  class="previewAudio"></audio>
