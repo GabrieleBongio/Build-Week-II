@@ -14,35 +14,56 @@
   overflow: hidden;
 }
 
-
-
 .btn-custom:hover {
   opacity: 1;
   transform: scale(1.2);
   cursor: pointer;
 }
 
-
 .underline-hover:hover {
   text-decoration: underline;
 }
 
-.ascoltateDiRecente, .albumTop, .artistTop, .playlistTop, .Estate2023Top, .gSup{
+.ascoltateDiRecente,
+.albumTop,
+.artistTop,
+.playlistTop,
+.Estate2023Top,
+.gSup {
   transition: background-color 0.3s, transform 0.3s;
 }
-.ascoltateDiRecente:hover, .albumTop:hover, .artistTop:hover, .playlistTop:hover, .Estate2023Top:hover, .gSup:hover {
-  background-color:rgb(55, 55, 55) !important;
-   transform: scale(1.05);
- 
+.ascoltateDiRecente:hover,
+.albumTop:hover,
+.artistTop:hover,
+.playlistTop:hover,
+.Estate2023Top:hover,
+.gSup:hover {
+  background-color: rgb(55, 55, 55) !important;
+  transform: scale(1.05);
 }
 
-.gSup2{
-  transition:  background-color 0.3s, transform 0.3s;
-
+.gSup2 {
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .gSup2:hover {
+  transform: translateX(1px);
+  background-color: rgb(31, 31, 31) !important;
+}
+.gSup3 {
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.gSup3:hover {
+  transform: scale(1.05);
+  filter: brightness(120%);
+}
+
+.gSup4 {
+  transition: background-color 0.3s;
+}
+
+.gSup4:hover {
+  background-color: rgb(55, 55, 55) !important;
   
-   transform:translateX(1px);
-   background-color:rgb(31, 31, 31) !important;
 }

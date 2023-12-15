@@ -46,7 +46,11 @@ fetch(URL + "artist/" + artistId, {
         listaCanzoni.innerHTML = "";
         let i = 1;
         resp.data.forEach((element) => {
-          listaCanzoni.innerHTML += ` <div class="col-8 d-flex gap-3 align-items-center justify-content-between mb-3">
+          listaCanzoni.innerHTML += ` 
+
+          <div class="col-12">
+          <div class="row gSup4 p-1 rounded-3">
+          <div class="col-8 d-flex gap-3 align-items-center justify-content-between   rounded-3">
            <div class="d-flex gap-3 align-items-center">
             <p class="text-dark-emphasis m-0">${i}</p>
             <a id="${element.id}" class="text-decoration-none canzone" href= "#"><img src="${
@@ -54,15 +58,15 @@ fetch(URL + "artist/" + artistId, {
           }" alt="" style="width: 45px"/></a>
             <a id="${
               element.id
-            }" class="text-decoration-none canzone" href="#"><p class="m-0 text-decoration-none text-white limite-righe-1">${
+            }" class="text-decoration-none canzone" href="#"><p class="m-0 text-white limite-righe-1 underline-hover">${
             element.title
           }</p></a>
           </div>
           <div class="d-flex">
-            <p class="m-0">${element.rank}</p>
+            <p class="m-0 ">${element.rank}</p>
           </div>
         </div>
-        <div class="col-4 d-flex justify-content-end align-items-center gap-4 pe-5 mb-3">
+        <div class="col-4 d-flex justify-content-end align-items-center gap-4 pe-5 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -79,6 +83,8 @@ fetch(URL + "artist/" + artistId, {
           <p class="text-white-50 m-0">${Math.floor(element.duration / 60)}:${
             element.duration % 60 < 10 ? "0" + (element.duration % 60) : element.duration % 60
           }</p>
+        </div>
+        </div>
         </div>`;
           i++;
         });
@@ -105,7 +111,7 @@ const functionLaMiaLibreria = (library) => {
   library.forEach((elem) => {
     if (elem.type === "artist") {
       document.querySelector("#laMiaLibreria").innerHTML += `
-          <div class="row align-items-center g-2 mb-3">
+          <div class="row align-items-center g-2 mb-3 gSup2">
             <div class="col-3">
               <a class="text-decoration-none" href="artist.html?artistId=${elem.id}">
                 <img src=${elem.picture} class="img-fluid rounded-pill" />
@@ -113,14 +119,14 @@ const functionLaMiaLibreria = (library) => {
             </div>
             <div class="col-9">
               <a class="text-decoration-none" href="artist.html?artistId=${elem.id}">
-                <p class="text-white m-0 limite-righe-1">${elem.name}</p>
+                <p class="text-white m-0 limite-righe-1 underline-hover">${elem.name}</p>
                 <p class="fw-normal text-white m-0 limite-righe-1">Artista</p>
               </a>
             </div>
           </div>`;
     } else if (elem.type === "album") {
       document.querySelector("#laMiaLibreria").innerHTML += `
-          <div class="row align-items-center g-2 mb-3">
+          <div class="row align-items-center g-2 mb-3 gSup2">
             <div class="col-3">
               <a class="text-decoration-none" href="album.html?albumId=${elem.id}">      
                 <img src=${elem.cover} class="img-fluid" />
@@ -128,14 +134,14 @@ const functionLaMiaLibreria = (library) => {
             </div>
             <div class="col-9">
               <a class="text-decoration-none" href="album.html?albumId=${elem.id}">      
-                <p class="text-white m-0 limite-righe-1">${elem.title}</p>
-                <p class="fw-normal text-white m-0 limite-righe-1">Album - ${elem.artist.name}</p>
+                <p class="text-white m-0 limite-righe-1 underline-hover">${elem.title}</p>
+                <p class="fw-normal text-white m-0 limite-righe-1 underline-hover">Album - ${elem.artist.name}</p>
               </a>
             </div>
           </div>`;
     } else if (elem.type === "playlist") {
       document.querySelector("#laMiaLibreria").innerHTML += `
-          <div class="row align-items-center g-2 mb-3">
+          <div class="row align-items-center g-2 mb-3 gSup2">
             <div class="col-3">
               <a class="text-decoration-none" href="#">
                 <img src=${elem.picture} class="img-fluid" />
@@ -143,7 +149,7 @@ const functionLaMiaLibreria = (library) => {
             </div>
             <div class="col-9">
               <a class="text-decoration-none" href="#">
-                <p class="text-white m-0 limite-righe-1">${elem.title}</p>
+                <p class="text-white m-0 limite-righe-1 underline-hover">${elem.title}</p>
                 <p class="fw-normal text-white m-0 limite-righe-1">Playlist - ${elem.nb_tracks} brani</p>
               </a>
             </div>
