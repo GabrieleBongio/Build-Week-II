@@ -145,6 +145,7 @@ const functionPlaylist = (library) => {
 };
 
 const functionLaMiaLibreria = (library) => {
+  document.querySelector("#laMiaLibreria").innerHTML = "";
   library.forEach((elem) => {
     if (elem.type === "artist") {
       document.querySelector("#laMiaLibreria").innerHTML += `
