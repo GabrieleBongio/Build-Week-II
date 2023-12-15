@@ -18,7 +18,7 @@ const functionGrigliaSuperiore = (library) => {
                     <img src="${element.picture}" class="img-fluid rounded-circle" />
                   </div>
                   <div class="col-9">
-                    <p class="fw-bold text-white m-0">${element.name}</p>
+                    <p class="fw-bold text-white m-0 limite-righe-1">${element.name}</p>
                   </div>
                 </div>
               </div>
@@ -34,7 +34,7 @@ const functionGrigliaSuperiore = (library) => {
                     <img src="${element.picture}" class="img-fluid" />
                   </div>
                   <div class="col-9">
-                    <p class="fw-bold text-white m-0">${element.title}</p>
+                    <p class="fw-bold text-white m-0 limite-righe-1">${element.title}</p>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@ const functionGrigliaSuperiore = (library) => {
                     <img src="${element.cover}" class="img-fluid" />
                   </div>
                   <div class="col-9">
-                    <p class="fw-bold text-white m-0">${element.title}</p>
+                    <p class="fw-bold text-white m-0 limite-righe-1">${element.title}</p>
                   </div>
                 </div>
               </div>
@@ -70,22 +70,22 @@ const functionAscoltateDiRecente = (library) => {
       ascoltateDiRecente[i].innerHTML += `
           <a class="text-decoration-none" href="artist.html?artistId=${arrayAscoltateDiRecente[i].id}">
             <img src="${arrayAscoltateDiRecente[i].picture}" class="img-fluid rounded-pill mb-3" />
-            <p class="fw-bold text-white m-0">${arrayAscoltateDiRecente[i].name}</p>
-            <p class="text-white m-0">Artista</p>
+            <p class="fw-bold text-white m-0 limite-righe-1">${arrayAscoltateDiRecente[i].name}</p>
+            <p class="text-white m-0 limite-righe-1">Artista</p>
           </a>`;
     } else if (arrayAscoltateDiRecente[i].type == "playlist") {
       ascoltateDiRecente[i].innerHTML += `
           <a class="text-decoration-none" href="#">
             <img src="${arrayAscoltateDiRecente[i].picture}" class="img-fluid rounded-2 mb-3" />
-            <p class="fw-bold text-white m-0">${arrayAscoltateDiRecente[i].title}</p>
-            <p class="text-white m-0">${arrayAscoltateDiRecente[i].nb_tracks} brani</p>
+            <p class="fw-bold text-white m-0 limite-righe-1">${arrayAscoltateDiRecente[i].title}</p>
+            <p class="text-white m-0 limite-righe-1">${arrayAscoltateDiRecente[i].nb_tracks} brani</p>
           </a>`;
     } else if (arrayAscoltateDiRecente[i].type == "album") {
       ascoltateDiRecente[i].innerHTML += `
           <a class="text-decoration-none" href="album.html?albumId=${arrayAscoltateDiRecente[i].id}">
             <img src="${arrayAscoltateDiRecente[i].cover}" class="img-fluid rounded-2 mb-3" />
-            <p class="fw-bold text-white m-0">${arrayAscoltateDiRecente[i].title}</p>
-            <p class="text-white m-0">${arrayAscoltateDiRecente[i].artist.name}</p>
+            <p class="fw-bold text-white m-0 limite-righe-1">${arrayAscoltateDiRecente[i].title}</p>
+            <p class="text-white m-0 limite-righe-1">${arrayAscoltateDiRecente[i].artist.name}</p>
           </a>`;
     }
   }
@@ -103,8 +103,8 @@ const functionAlbum = (library) => {
     albumTop[i].innerHTML = `
         <a class="text-decoration-none" href="album.html?albumId=${arrayAlbum[i].id}">
           <img src="${arrayAlbum[i].cover}" class="img-fluid rounded-2 mb-3" />
-          <p class="fw-bold text-white m-0">${arrayAlbum[i].title}</p>
-          <p class="text-white m-0">${arrayAlbum[i].artist.name}</p>
+          <p class="fw-bold text-white m-0 limite-righe-1">${arrayAlbum[i].title}</p>
+          <p class="text-white m-0 limite-righe-1">${arrayAlbum[i].artist.name}</p>
         </a>`;
   }
 };
@@ -121,7 +121,7 @@ const functionArtist = (library) => {
     artistTop[i].innerHTML = `
         <a class="text-decoration-none" href="artist.html?artistId=${arrayArtist[i].id}">
           <img src="${arrayArtist[i].picture}" class="img-fluid rounded-pill mb-3" />
-          <p class="fw-bold text-white m-0">${arrayArtist[i].name}</p>
+          <p class="fw-bold text-white m-0 limite-righe-1">${arrayArtist[i].name}</p>
         </a>`;
   }
 };
@@ -138,8 +138,8 @@ const functionPlaylist = (library) => {
     playlistTop[i].innerHTML = `
         <a class="text-decoration-none" href="#">
           <img src="${arrayPlaylist[i].picture}" class="img-fluid rounded-pill mb-3" />
-          <p class="fw-bold text-white m-0">${arrayPlaylist[i].title}</p>
-          <p class="text-white m-0">${arrayPlaylist[i].nb_tracks} brani</p>
+          <p class="fw-bold text-white m-0 limite-righe-1">${arrayPlaylist[i].title}</p>
+          <p class="text-white m-0 limite-righe-1">${arrayPlaylist[i].nb_tracks} brani</p>
         </a>`;
   }
 };
@@ -156,8 +156,8 @@ const functionLaMiaLibreria = (library) => {
             </div>
             <div class="col-9">
               <a class="text-decoration-none" href="artist.html?artistId=${elem.id}">
-                <p class="text-white m-0" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden;">${elem.name}</p>
-                <p class="fw-normal text-white m-0" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden;">Artista</p>
+                <p class="text-white m-0 limite-righe-1">${elem.name}</p>
+                <p class="fw-normal text-white m-0 limite-righe-1">Artista</p>
               </a>
             </div>
           </div>`;
@@ -171,8 +171,8 @@ const functionLaMiaLibreria = (library) => {
             </div>
             <div class="col-9">
               <a class="text-decoration-none" href="album.html?albumId=${elem.id}">      
-                <p class="text-white m-0" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden;">${elem.title}</p>
-                <p class="fw-normal text-white m-0" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden;">Album - ${elem.artist.name}</p>
+                <p class="text-white m-0 limite-righe-1">${elem.title}</p>
+                <p class="fw-normal text-white m-0 limite-righe-1">Album - ${elem.artist.name}</p>
               </a>
             </div>
           </div>`;
@@ -186,8 +186,8 @@ const functionLaMiaLibreria = (library) => {
             </div>
             <div class="col-9">
               <a class="text-decoration-none" href="#">
-                <p class="text-white m-0" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden;">${elem.title}</p>
-                <p class="fw-normal text-white m-0" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden;">Playlist - ${elem.nb_tracks} brani</p>
+                <p class="text-white m-0 limite-righe-1">${elem.title}</p>
+                <p class="fw-normal text-white m-0 limite-righe-1">Playlist - ${elem.nb_tracks} brani</p>
               </a>
             </div>
           </div>`;
@@ -254,8 +254,8 @@ const functionSong = (id) => {
           <div class="col-9">
             <div class="d-flex align-items-center">
               <div>
-                <p class="fw-bold m-0 text-white">${song.title}</p>
-                <p class="text-white opacity-75 m-0">${song.artist.name}</p>
+                <p class="fw-bold m-0 limite-righe-1 text-white">${song.title}</p>
+                <p class="text-white opacity-75 m-0 limite-righe-1">${song.artist.name}</p>
               </div>
               <div class="ms-3">
                 <svg
@@ -284,8 +284,8 @@ const functionSong = (id) => {
           </div>
           <div class="col-5">
             <div>
-              <p class="fw-bold m-0 text-white">${song.title}</p>
-              <p class="text-white opacity-75 m-0">${song.artist.name}</p>
+              <p class="fw-bold m-0 limite-righe-1 text-white">${song.title}</p>
+              <p class="text-white opacity-75 m-0 limite-righe-1">${song.artist.name}</p>
             </div>
           </div>
           <div class="col-2 text-center">
@@ -338,8 +338,8 @@ const functionEstate2023 = (arrayEstate2023) => {
     Estate2023Top[i].innerHTML = `
         <a class="text-decoration-none" href="#">
           <img src="${arrayEstate2023[i].picture}" class="img-fluid rounded-2 mb-3" />
-          <p class="fw-bold text-white m-0">${arrayEstate2023[i].title}</p>
-          <p class="text-white m-0">${arrayEstate2023[i].nb_tracks} brani</p>
+          <p class="fw-bold text-white m-0 limite-righe-1">${arrayEstate2023[i].title}</p>
+          <p class="text-white m-0 limite-righe-1">${arrayEstate2023[i].nb_tracks} brani</p>
         </a>`;
   }
 };
