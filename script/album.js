@@ -37,9 +37,9 @@ function getColorFromImage(imageUrl, x = 50, y = 50, callback) {
 
 const params = new URLSearchParams(window.location.search); // oggetto costruito a partire dai parametri nella URL es. ?resourceId=2938123
 // per renderlo dinamico
-console.log(params)
-// const id = params.get("id");
-const id = 97140952;
+console.log(params);
+// const id = params.get("albumId");
+const id = 381445657;
 
 fetch(URL + id, {
   method: "GET",
@@ -83,7 +83,9 @@ fetch(URL + id, {
                     class="img-fluid rounded-circle"
                   />
                 </div>
-                <p class="text-light m-0"><b><a href="./artist.html" class="text-decoration-none text-light">${albumInfo.artist.name}</a></b></p>
+                <p class="text-light m-0"><b><a href="./artist.html" class="text-decoration-none text-light">${
+                  albumInfo.artist.name
+                }</a></b></p>
                 <p class="text-light m-0 d-none d-md-none d-lg-flex">· ${albumInfo.release_date.slice(0, 4)} · ${
       albumInfo.tracks.data.length
     } canzoni, ${Math.floor(albumInfo.duration / 60)} min ${String(albumInfo.duration % 60).padStart(2, "0")} sec.</p>
@@ -106,22 +108,27 @@ fetch(URL + id, {
     coverImg.crossOrigin = "Anonymous";
 
     //getting color
+    let cssColor;
+
     getColorFromImage(coverImg.src, 50, 50, function (color) {
-      const cssColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
+      cssColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
       const cssColor2 = `rgba(${color.r} , ${color.g - 20}, ${color.b}, ${color.a})`;
-      console.log("cssColor:", cssColor);
-      const gradient = `linear-gradient(176deg, ${cssColor} 0% ,${cssColor2} 50%, #191919 100% )`;
-      console.log("cssColor2:", cssColor2);
+
+      const gradient = `linear-gradient(176deg, ${cssColor} 0% ,${cssColor2} 50%, #414141 100% )`;
 
       albumHeader.style.background = gradient;
 
-    //   window.addEventListener("scroll", function () {
-    //     console.log(this.scrollY)
-    //     const topBar = document.querySelector("#topBar")
-    //     if (this.scrollY > 10) {
-    //         topBar.style.background = cssColor;
-    //     }
-    //   });
+      window.addEventListener("scroll", function () {
+        const topBar = document.querySelector("#topBar");
+
+        if (scrollY < 10) {
+          topBar.style.cssText = "background: #000000 !important; transition: background 0.4s ease;";
+        } else if (scrollY > 10) {
+          topBar.style.cssText = `background: ${cssColor2} !important;
+          transition: background 0.4s ease;
+          opacity:0.98;`;
+        }
+      });
     });
 
     // songs printing
@@ -154,7 +161,10 @@ fetch(URL + id, {
         <div class="col-8 col-md-8">
           <div>
             <p class="m-0">${song.title}</p>
-            <p class="m-0 opacity-75"><a href="./artist.html" class="text-decoration-none text-light">${albumInfo.artist.name}</a></p>
+            <p class="m-0 opacity-75"><a href="./artist.html" class="text-decoration-none text-light">${
+              albumInfo.artist.name
+            }</a></p>
+            <audio src="${song.preview}"  class="previewAudio"></audio>
           </div>
         </div>
         <div class="col-md-3 d-none d-md-block">
@@ -205,19 +215,47 @@ fetch(URL + id, {
 
     const singleSong = document.querySelectorAll(".singleSong");
 
-    singleSong.forEach((song) => {
-      const trackPlayBtn = song.querySelector(".trackPlayBtn");
-      const indexNum = song.querySelector(".indexNum");
+    singleSong.forEach((song1) => {
+      const trackPlayBtn = song1.querySelector(".trackPlayBtn");
+      const indexNum = song1.querySelector(".indexNum");
 
-      song.addEventListener("mouseover", () => {
-        song.classList.add("bg-secondary", "bg-opacity-25");
+      song1.addEventListener("mouseover", () => {
+        song1.classList.add("bg-secondary", "bg-opacity-25");
         trackPlayBtn.classList.remove("d-none");
         indexNum.classList.add("d-none");
       });
-      song.addEventListener("mouseout", () => {
-        song.classList.remove("bg-secondary");
+      song1.addEventListener("mouseout", () => {
+        song1.classList.remove("bg-secondary");
         trackPlayBtn.classList.add("d-none");
         indexNum.classList.remove("d-none");
+      });
+
+      // playing audio
+      const previewAudio = document.querySelectorAll(".previewAudio");
+      const trackPlayBtns = document.querySelectorAll(".trackPlayBtn");
+      const isPlayingArray = Array.from({ length: previewAudio.length }, () => false);
+
+      
+
+    
+
+      trackPlayBtns.forEach((trackPlayBtn, index) => {
+        trackPlayBtn.addEventListener("click", () => {
+          if (isPlayingArray[index]) {
+            previewAudio[index].pause();
+          } else {
+            previewAudio[index].play();
+          }
+
+          isPlayingArray[index] = !isPlayingArray[index];
+
+          for (let i = 0; i < previewAudio.length; i++) {
+            if (i !== index && isPlayingArray[i]) {
+              previewAudio[i].pause();
+              isPlayingArray[i] = false;
+            }
+          }
+        });
       });
     });
 
