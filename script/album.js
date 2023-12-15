@@ -83,9 +83,9 @@ fetch(URL + "album/" + id, {
                     class="img-fluid rounded-circle"
                   />
                 </div>
-                <p class="text-light m-0 underline-hover"><b><a href="./artist.html" class="text-decoration-none text-light  ">${
-                  albumInfo.artist.name
-                }</a></b></p>
+                <p class="text-light m-0 underline-hover"><b><a href="./artist.html?artistId=${
+                  albumInfo.artist.id
+                }" class="text-decoration-none text-light  ">${albumInfo.artist.name}</a></b></p>
                 <p class="text-light m-0 d-none d-md-none d-lg-flex">· ${albumInfo.release_date.slice(0, 4)} · ${
       albumInfo.tracks.data.length
     } canzoni, ${Math.floor(albumInfo.duration / 60)} min ${String(albumInfo.duration % 60).padStart(2, "0")} sec.</p>
@@ -165,9 +165,9 @@ fetch(URL + "album/" + id, {
             <a class="text-decoration-none canzone" href="#" id="${song.id}">
               <p class="m-0 underline-hover text-white">${song.title}</p>
             </a>
-            <p class="m-0 opacity-75 underline-hover"><a href="./artist.html" class="text-decoration-none text-light">${
-              albumInfo.artist.name
-            }</a></p>
+            <p class="m-0 opacity-75 underline-hover"><a href="./artist.html?artistId=${
+              albumInfo.artist.id
+            }" class="text-decoration-none text-light">${albumInfo.artist.name}</a></p>
             <audio src="${song.preview}"  class="previewAudio"></audio>
           </div>
         </div>
@@ -398,8 +398,8 @@ const functionSong = (id) => {
       console.log(song);
       const songDetails = document.querySelector("#songDetails");
       songDetails.innerHTML = `
-          <div class="col-3">
-            <img src="${song.album.cover}" class="img-fluid" />
+          <div class="col-3 text-center">
+            <img src="${song.album.cover}" style="max-height: 60px"/>
           </div>
           <div class="col-9">
             <div class="d-flex align-items-center">

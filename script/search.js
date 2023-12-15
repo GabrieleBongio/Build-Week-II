@@ -190,8 +190,8 @@ const functionSong = (id) => {
       console.log(song);
       const songDetails = document.querySelector("#songDetails");
       songDetails.innerHTML = `
-          <div class="col-3">
-            <img src="${song.album.cover}" class="img-fluid" />
+          <div class="col-3 text-center">
+            <img src="${song.album.cover}" style="max-height: 60px"/>
           </div>
           <div class="col-9">
             <div class="d-flex align-items-center">
