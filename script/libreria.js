@@ -25,10 +25,6 @@ const laTuaLibreria = [
   },
   {
     type: "playlist",
-    id: 3428639822,
-  },
-  {
-    type: "playlist",
     id: 579513551,
   },
   {
