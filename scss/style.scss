@@ -58,3 +58,12 @@
   transform: scale(1.05);
   filter: brightness(120%);
 }
+
+.gSup4 {
+  transition: background-color 0.3s;
+}
+
+.gSup4:hover {
+  background-color: rgb(55, 55, 55) !important;
+  
+}

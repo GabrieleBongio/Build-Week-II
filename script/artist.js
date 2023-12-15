@@ -46,7 +46,11 @@ fetch(URL + "artist/" + artistId, {
         listaCanzoni.innerHTML = "";
         let i = 1;
         resp.data.forEach((element) => {
-          listaCanzoni.innerHTML += ` <div class="col-8 d-flex gap-3 align-items-center justify-content-between mb-3 gSup rounded-3">
+          listaCanzoni.innerHTML += ` 
+
+          <div class="col-12">
+          <div class="row gSup4 p-1 rounded-3">
+          <div class="col-8 d-flex gap-3 align-items-center justify-content-between   rounded-3">
            <div class="d-flex gap-3 align-items-center">
             <p class="text-dark-emphasis m-0">${i}</p>
             <a id="${element.id}" class="text-decoration-none canzone" href= "#"><img src="${
@@ -62,7 +66,7 @@ fetch(URL + "artist/" + artistId, {
             <p class="m-0 ">${element.rank}</p>
           </div>
         </div>
-        <div class="col-4 d-flex justify-content-end align-items-center gap-4 pe-5 mb-3">
+        <div class="col-4 d-flex justify-content-end align-items-center gap-4 pe-5 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -79,6 +83,8 @@ fetch(URL + "artist/" + artistId, {
           <p class="text-white-50 m-0">${Math.floor(element.duration / 60)}:${
             element.duration % 60 < 10 ? "0" + (element.duration % 60) : element.duration % 60
           }</p>
+        </div>
+        </div>
         </div>`;
           i++;
         });
