@@ -8,16 +8,15 @@
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="./assets/dist/css/style.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body class="bg-black">
     <main>
       <div class="container-fluid px-1">
         <div class="row g-1 align-items-start">
-          <div class="col-12 d-none col-sm-4 d-sm-block position-sticky top-0">
-            <div class="bg-dark rounded-3 py-2 px-3  mt-2 fw-bold">
+          <div class="col-12 d-none col-sm-4 d-sm-block col-lg-3 position-sticky top-0">
+            <div class="bg-dark rounded-3 py-2 px-3 mt-2 fw-bold">
               <a href="./index.html" class="d-block text-white text-decoration-none m-2 mb-3 opacity-50">
                 <span>
                   <svg
@@ -55,7 +54,7 @@
                 Cerca
               </a>
             </div>
-            <div class="bg-dark rounded-3 py-2 px-3  mt-2 fw-bold">
+            <div class="bg-dark rounded-3 py-2 px-3 mt-2 fw-bold">
               <div class="d-flex justify-content-between align-items-center">
                 <a href="#" class="d-flex align-items-center text-white opacity-50 m-2 text-decoration-none">
                   <span
@@ -137,7 +136,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-sm-8">
+          <div class="col-12 col-sm-8 col-lg-7">
             <!--
 
             -->
@@ -153,32 +152,73 @@
                 "
                 class="position-relative"
               >
-              <div class="d-flex justify-content-between p-3 position-sticky top-0 z-3" id="topBar">
-                <div>
-                  <a href="javascript:history.go(-1)" class="btn btn-dark py-1 px-2 rounded-pill bg-black">
-                    <svg data-encore-id="icon" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 kgVuXA IYDlXmBmmUKHveMzIPCF" fill="#ffffff" viewBox="0 0 16 16" style="width: 16px; margin-top: -4px">
-                      <path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path>
-                    </svg>
-                  </a>
-                  <a href="javascript:history.go(1)" class="btn btn-dark py-1 px-2 rounded-circle bg-black">
-                    <svg data-encore-id="icon" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 kgVuXA IYDlXmBmmUKHveMzIPCF" fill="#ffffff" viewBox="0 0 16 16" style="width: 16px; margin-top: -4px">
-                      <path d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"></path>
-                    </svg>
-                  </a>
+                <div class="d-flex justify-content-between p-3 position-sticky top-0 z-3" id="topBar">
+                  <div>
+                    <a href="javascript:history.go(-1)" class="btn btn-dark py-1 px-2 rounded-pill bg-black">
+                      <svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        class="Svg-sc-ytk21e-0 kgVuXA IYDlXmBmmUKHveMzIPCF"
+                        fill="#ffffff"
+                        viewBox="0 0 16 16"
+                        style="width: 16px; margin-top: -4px"
+                      >
+                        <path
+                          d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a href="javascript:history.go(1)" class="btn btn-dark py-1 px-2 rounded-circle bg-black">
+                      <svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        class="Svg-sc-ytk21e-0 kgVuXA IYDlXmBmmUKHveMzIPCF"
+                        fill="#ffffff"
+                        viewBox="0 0 16 16"
+                        style="width: 16px; margin-top: -4px"
+                      >
+                        <path
+                          d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div>
+                    <button class="btn btn-dark py-1 px-2 rounded-circle bg-black opacity-75">
+                      <svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        class="Svg-sc-ytk21e-0 kPpCsU t93PZphItuM19kPhX7tC"
+                        fill="#ffffff"
+                        viewBox="0 0 16 16"
+                        style="width: 15px; margin-top: -4px"
+                      >
+                        <path
+                          d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button class="btn btn-dark py-1 px-2 rounded-circle bg-black opacity-75">
+                      <svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        data-testid="user-icon"
+                        fill="#ffffff"
+                        viewBox="0 0 16 16"
+                        class="Svg-sc-ytk21e-0 kPpCsU"
+                        style="width: 15px; margin-top: -4px"
+                      >
+                        <path
+                          d="M6.233.371a4.388 4.388 0 0 1 5.002 1.052c.421.459.713.992.904 1.554.143.421.263 1.173.22 1.894-.078 1.322-.638 2.408-1.399 3.316l-.127.152a.75.75 0 0 0 .201 1.13l2.209 1.275a4.75 4.75 0 0 1 2.375 4.114V16H.382v-1.143a4.75 4.75 0 0 1 2.375-4.113l2.209-1.275a.75.75 0 0 0 .201-1.13l-.126-.152c-.761-.908-1.322-1.994-1.4-3.316-.043-.721.077-1.473.22-1.894a4.346 4.346 0 0 1 .904-1.554c.411-.448.91-.807 1.468-1.052zM8 1.5a2.888 2.888 0 0 0-2.13.937 2.85 2.85 0 0 0-.588 1.022c-.077.226-.175.783-.143 1.323.054.921.44 1.712 1.051 2.442l.002.001.127.153a2.25 2.25 0 0 1-.603 3.39l-2.209 1.275A3.25 3.25 0 0 0 1.902 14.5h12.196a3.25 3.25 0 0 0-1.605-2.457l-2.209-1.275a2.25 2.25 0 0 1-.603-3.39l.127-.153.002-.001c.612-.73.997-1.52 1.052-2.442.032-.54-.067-1.097-.144-1.323a2.85 2.85 0 0 0-.588-1.022A2.888 2.888 0 0 0 8 1.5z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <div>
-                  <button class="btn btn-dark py-1 px-2 rounded-circle bg-black opacity-75">
-                    <svg data-encore-id="icon" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 kPpCsU t93PZphItuM19kPhX7tC" fill="#ffffff" viewBox="0 0 16 16" style="width: 15px; margin-top: -4px">
-                      <path d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z"></path>
-                    </svg>
-                  </button>
-                  <button class="btn btn-dark py-1 px-2 rounded-circle bg-black opacity-75">
-                    <svg data-encore-id="icon" role="img" aria-hidden="true" data-testid="user-icon" fill="#ffffff" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 kPpCsU" style="width: 15px; margin-top: -4px">
-                      <path d="M6.233.371a4.388 4.388 0 0 1 5.002 1.052c.421.459.713.992.904 1.554.143.421.263 1.173.22 1.894-.078 1.322-.638 2.408-1.399 3.316l-.127.152a.75.75 0 0 0 .201 1.13l2.209 1.275a4.75 4.75 0 0 1 2.375 4.114V16H.382v-1.143a4.75 4.75 0 0 1 2.375-4.113l2.209-1.275a.75.75 0 0 0 .201-1.13l-.126-.152c-.761-.908-1.322-1.994-1.4-3.316-.043-.721.077-1.473.22-1.894a4.346 4.346 0 0 1 .904-1.554c.411-.448.91-.807 1.468-1.052zM8 1.5a2.888 2.888 0 0 0-2.13.937 2.85 2.85 0 0 0-.588 1.022c-.077.226-.175.783-.143 1.323.054.921.44 1.712 1.051 2.442l.002.001.127.153a2.25 2.25 0 0 1-.603 3.39l-2.209 1.275A3.25 3.25 0 0 0 1.902 14.5h12.196a3.25 3.25 0 0 0-1.605-2.457l-2.209-1.275a2.25 2.25 0 0 1-.603-3.39l.127-.153.002-.001c.612-.73.997-1.52 1.052-2.442.032-.54-.067-1.097-.144-1.323a2.85 2.85 0 0 0-.588-1.022A2.888 2.888 0 0 0 8 1.5z"></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
                 <div class="p-3 position-absolute bottom-0">
                   <p class="text-white fw-bold">
                     <svg
@@ -210,27 +250,44 @@
               <div class="row">
                 <div class="col-12">
                   <div class="d-flex gap-4 align-items-center py-4 px-3">
-                    <span class="btn btn-success p-2 rounded-circle btn-custom ">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-play-fill " viewBox="0 0 16 16">
-                        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+                    <span class="btn btn-success p-2 rounded-circle btn-custom">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        fill="currentColor"
+                        class="bi bi-play-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+                        ></path>
                       </svg>
                     </span>
                     <button class="btn bg-transparent btn-outline-secondary py-1 px-2 rounded-pill text-white fw-bold">
                       Following
                     </button>
                     <span class="opacity-75 px-2">
-                        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" style="width: 35px" fill="#ffffff" class="Svg-sc-ytk21e-0 iaCPPY btn-custom">
-                          <path d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                        </svg>
-                      </span>
+                      <svg
+                        data-encore-id="icon"
+                        role="img"
+                        aria-hidden="true"
+                        viewBox="0 0 24 24"
+                        style="width: 35px"
+                        fill="#ffffff"
+                        class="Svg-sc-ytk21e-0 iaCPPY btn-custom"
+                      >
+                        <path
+                          d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+                        ></path>
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </div>
               <h2 class="text-white px-4 mb-5">Popolari</h2>
               <div class="container px-5">
-                <div class="row text-white pe-5" id="listaCanzoni">
-                 
-                </div>
+                <div class="row text-white pe-5" id="listaCanzoni"></div>
               </div>
               <footer>
                 <div class="row g-4 px-4">
@@ -343,6 +400,143 @@
 
             -->
           </div>
+          <!--  Barra lateratle sinistra -->
+          <div class="col-12 d-none col-lg-2 d-lg-block position-sticky top-0" style="height: 100vh">
+            <div class="bg-dark rounded-3 py-2 px-3 border border-2 border-info mt-2 fw-bold h-100">
+              <div class="d-flex justify-content-lg-end justify-content-xl-between">
+                <span class="d-none d-xl-block">Attività amici</span>
+                <span class="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    class="bi bi-person-add me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+                    />
+                    <path
+                      d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    class="bi bi-x-lg"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div>
+                <div class="row mt-5 g-2">
+                  <div class="col-3">
+                    <img
+                      class="img-fluid rounded-circle"
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXRlbnRlfGVufDB8fDB8fHww"
+                      alt="img-utente"
+                    />
+                  </div>
+                  <div class="col-9 col-xl-7">
+                    <h5 class="fs-8 fw-semibold limite-righe-1">Charlie Hookham</h5>
+                    <p class="fs-10 mb-1 limite-righe-1">In Camera • Yumi Zouma</p>
+                    <p class="fs-10 mb-1 limite-righe-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        fill="currentColor"
+                        class="bi bi-disc"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                          d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0M8 4a4 4 0 0 0-4 4 .5.5 0 0 1-1 0 5 5 0 0 1 5-5 .5.5 0 0 1 0 1m4.5 3.5a.5.5 0 0 1 .5.5 5 5 0 0 1-5 5 .5.5 0 0 1 0-1 4 4 0 0 0 4-4 .5.5 0 0 1 .5-.5"
+                        />
+                      </svg>
+                      EP III
+                    </p>
+                  </div>
+                  <div class="d-none d-xl-block col-2">
+                    <p class="fs-10 limite-righe-1">4 ore</p>
+                  </div>
+                </div>
+                <div class="row mt-5 g-2">
+                  <div class="col-3">
+                    <img
+                      class="img-fluid rounded-circle"
+                      src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXRlbnRlfGVufDB8fDB8fHww"
+                      alt="img-utente"
+                    />
+                  </div>
+                  <div class="col-9 col-xl-7">
+                    <h5 class="fs-8 fw-semibold limite-righe-1">Lightdark02</h5>
+                    <p class="fs-10 mb-1 limite-righe-1">Aimed to Kill • Jeid LeMac</p>
+                    <p class="fs-10 mb-1 limite-righe-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        fill="currentColor"
+                        class="bi bi-disc"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                          d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0M8 4a4 4 0 0 0-4 4 .5.5 0 0 1-1 0 5 5 0 0 1 5-5 .5.5 0 0 1 0 1m4.5 3.5a.5.5 0 0 1 .5.5 5 5 0 0 1-5 5 .5.5 0 0 1 0-1 4 4 0 0 0 4-4 .5.5 0 0 1 .5-.5"
+                        />
+                      </svg>
+                      Aimed to Kill
+                    </p>
+                  </div>
+                  <div class="d-none d-xl-block col-2">
+                    <p class="fs-10 limite-righe-1">8 ore</p>
+                  </div>
+                </div>
+                <div class="row mt-5 g-2">
+                  <div class="col-3">
+                    <img
+                      class="img-fluid rounded-circle"
+                      src="https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAwfHx1dGVudGV8ZW58MHx8MHx8fDA%3D"
+                      alt="img-utente"
+                    />
+                  </div>
+                  <div class="col-9 col-xl-7">
+                    <h5 class="fs-8 fw-semibold limite-righe-1">Valeria Traverso</h5>
+                    <p class="fs-10 mb-1 limite-righe-1">New • Sleeping Wolf</p>
+                    <p class="fs-10 mb-1 limite-righe-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        fill="currentColor"
+                        class="bi bi-music-note-beamed"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2"
+                        />
+                        <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z" />
+                        <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z" />
+                      </svg>
+                      Twint Badass mood
+                    </p>
+                  </div>
+                  <div class="d-none d-xl-block col-2">
+                    <p class="fs-10 limite-righe-1">3 giorni</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fine Barra lateratle sinistra -->
         </div>
       </div>
     </main>
@@ -411,7 +605,7 @@
                   ></path>
                 </svg>
               </button>
-              <button class="btn btn-light bg-white py-1 px-2 border border-0 rounded-pill" id="playButton">
+              <button class="btn btn-light bg-white py-1 px-2 border border-0 rounded-pill playButton">
                 <svg
                   data-encore-id="icon"
                   role="img"
@@ -426,7 +620,7 @@
                   ></path>
                 </svg>
               </button>
-              <button class="btn btn-light bg-white py-1 px-2 border border-0 rounded-pill d-none" id="pauseButton">
+              <button class="btn btn-light bg-white py-1 px-2 border border-0 rounded-pill d-none pauseButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -614,19 +808,36 @@
             </svg>
           </div>
           <div class="col-2 text-center">
-            <svg
-              data-encore-id="icon"
-              role="img"
-              aria-hidden="true"
-              fill="#ffffff"
-              viewBox="0 0 16 16"
-              class="Svg-sc-ytk21e-0 kPpCsU"
-              style="width: 20px; margin-top: -4px"
-            >
-              <path
-                d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
-              ></path>
-            </svg>
+            <button class="btn btn-dark py-1 px-2 border border-0 rounded-pill playButton">
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                fill="#ffffff"
+                viewBox="0 0 16 16"
+                class="Svg-sc-ytk21e-0 kPpCsU"
+                style="width: 16px; margin-top: -4px"
+              >
+                <path
+                  d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
+                ></path>
+              </svg>
+            </button>
+            <button class="btn btn-dark py-1 px-2 border border-0 rounded-pill d-none pauseButton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="#ffffff"
+                class="bi bi-pause-fill"
+                viewBox="0 0 16 16"
+                style="width: 16px; margin-top: -4px"
+              >
+                <path
+                  d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

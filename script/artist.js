@@ -230,7 +230,9 @@ const functionSong = (id) => {
           </div>
           `;
       const songDuration = document.querySelector("#songDuration");
-      songDuration.innerHTML = `${Math.floor(song.duration / 60)}:${song.duration % 60}`;
+      songDuration.innerHTML = `${Math.floor(song.duration / 60)}:${
+        song.duration % 60 < 10 ? "0" + (song.duration % 60) : song.duration % 60
+      }`;
       const songDetailsSm = document.querySelector("#songDetailsSm");
       songDetailsSm.innerHTML = `
           <div class="col-3">
@@ -240,7 +242,6 @@ const functionSong = (id) => {
             <div>
               <p class="fw-bold m-0 limite-righe-1 text-white">${song.title}</p>
               <p class="text-white opacity-75 m-0 limite-righe-1">${song.artist.name}</p>
-              <audio src="${song.preview}"></audio>
             </div>
           </div>
           <div class="col-2 text-center">
@@ -259,31 +260,59 @@ const functionSong = (id) => {
             </svg>
           </div>
           <div class="col-2 text-center">
-            <svg
-              data-encore-id="icon"
-              role="img"
-              aria-hidden="true"
-              fill="#ffffff"
-              viewBox="0 0 16 16"
-              class="Svg-sc-ytk21e-0 kPpCsU"
-              style="width: 20px; margin-top: -4px"
-            >
-              <path
-                d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
-              ></path>
-            </svg>
+            <button class="btn btn-dark py-1 px-2 border border-0 rounded-pill playButton">
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                fill="#ffffff"
+                viewBox="0 0 16 16"
+                class="Svg-sc-ytk21e-0 kPpCsU"
+                style="width: 20px; margin-top: -4px"
+              >
+                <path
+                  d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
+                ></path>
+              </svg>
+            </button>
+            <button class="btn btn-dark py-1 px-2 border border-0 rounded-pill d-none pauseButton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="#ffffff"
+                class="bi bi-pause-fill"
+                viewBox="0 0 16 16"
+                style="width: 20px; margin-top: -4px"
+              >
+                <path
+                  d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"
+                />
+              </svg>
+            </button>
           </div>
           `;
       const audio = document.querySelector("#audio");
       audio.play();
-      document.querySelector("#playButton").classList.add("d-none");
-      document.querySelector("#pauseButton").classList.remove("d-none");
+      console.log(document.querySelectorAll(".pauseButton"));
+      console.log(document.querySelectorAll(".playButton"));
+      Array.from(document.querySelectorAll(".playButton")).forEach((btn) => btn.classList.add("d-none"));
+      Array.from(document.querySelectorAll(".pauseButton")).forEach((btn) => btn.classList.remove("d-none"));
+      Array.from(document.querySelectorAll(".playButton")).forEach((btn) => {
+        console.log(btn);
+        btn.removeEventListener("click", functionPlay);
+        btn.addEventListener("click", functionPlay);
+      });
+      Array.from(document.querySelectorAll(".pauseButton")).forEach((btn) => {
+        btn.removeEventListener("click", functionPause);
+        btn.addEventListener("click", functionPause);
+      });
     });
 };
 
-document.querySelector("#playButton").addEventListener("click", (event) => {
-  document.querySelector("#playButton").classList.add("d-none");
-  document.querySelector("#pauseButton").classList.remove("d-none");
+const functionPlay = () => {
+  Array.from(document.querySelectorAll(".playButton")).forEach((btn) => btn.classList.add("d-none"));
+  Array.from(document.querySelectorAll(".pauseButton")).forEach((btn) => btn.classList.remove("d-none"));
   const audio = document.querySelector("#audio");
   console.log(audio);
   if (audio.classList == "play") {
@@ -293,11 +322,11 @@ document.querySelector("#playButton").addEventListener("click", (event) => {
     audio.classList = "play";
     audio.play();
   }
-});
+};
 
-document.querySelector("#pauseButton").addEventListener("click", (event) => {
-  document.querySelector("#pauseButton").classList.add("d-none");
-  document.querySelector("#playButton").classList.remove("d-none");
+const functionPause = () => {
+  Array.from(document.querySelectorAll(".playButton")).forEach((btn) => btn.classList.remove("d-none"));
+  Array.from(document.querySelectorAll(".pauseButton")).forEach((btn) => btn.classList.add("d-none"));
   const audio = document.querySelector("#audio");
   console.log(audio);
   if (audio.classList == "play") {
@@ -307,7 +336,7 @@ document.querySelector("#pauseButton").addEventListener("click", (event) => {
     audio.classList = "play";
     audio.play();
   }
-});
+};
 
 const songId = params.get("songId");
 
