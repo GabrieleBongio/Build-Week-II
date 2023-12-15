@@ -114,7 +114,7 @@ fetch(URL + "album/" + id, {
       cssColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
       const cssColor2 = `rgba(${color.r} , ${color.g - 20}, ${color.b}, ${color.a})`;
 
-      const gradient = `linear-gradient(176deg, ${cssColor} 0% ,${cssColor2} 50%, #414141 100% )`;
+      const gradient = `linear-gradient(176deg, ${cssColor} 0% ,${cssColor2} 40%, #0c0c0c 100% )`;
 
       albumHeader.style.background = gradient;
 
